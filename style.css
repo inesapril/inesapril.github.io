@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('assets/image/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #222;
+}
+
+header {
+  display: inline;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.jumbotron h1 {
+font-size: 3rem;
+font-weight: 700;
+}
+
+.jumbotron p{
+  text-align: center;
+}
+
+.jumbotron ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+}
+
+.jumbotron ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.jumbotron ul li a:hover {
+  text-decoration: underline;
+}
+
+.jumbotron ul li a img {
+width: 32px; /* kamu bisa sesuaikan ukurannya */
+height: 32px;
+object-fit: contain;
+transition: transform 0.3s ease;
+}
+
+.jumbotron ul li a img:hover {
+transform: scale(1.1); /* efek membesar saat hover */
+}
+
+nav {
+  display: flex;
+  max-width: 1155px;
+  margin: 10px auto 0px;
+  overflow: auto;
+  background-color:white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #007a9e;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  transform: scale(1.1);
+}
+
+nav a:hover,
+nav a:focus {
+  outline: none;
+  background-color: rgba(93, 173, 248, 0.35);
+  transform: scale(1.05);
+}
+
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto 60px;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* removed #content css as requested */
+
+#content-section {
+  width: 100%;
+  padding: 20px 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+article.card {
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #222;
+}
+
+h2 {
+  color: #007a9e;
+  border-bottom: 3px solid #00a2c6;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #007a9e;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,162,198,0.5);
+  margin: 15px 0;
+}
+
+section p, section ul, section table {
+  margin-top: 10px;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section ul li {
+  margin: 6px 0;
+}
+
+aside {
+  width: 25%;
+  padding: 25px 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+aside .card {
+  background-color: #ffffff;
+  color: #00a2c6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+aside h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+aside button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 8px;
+  color: #00a2c6;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: left;
+}
+
+aside button:hover,
+aside button:focus {
+  background-color: rgba(93, 173, 248, 0.35);
+  outline: none;
+  transform: scale(1.05);
+}
+
+table {
+  width: 98%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px 10px;
+  border: 1px solid #ffffff;
+  text-align: justify;
+  vertical-align: top;
+}
+
+table th {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 25%;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #00a2c6;
+  color: white;
+  font-size: 0.9rem;
+}
+
+#tugas1,
+#tugas2 {
+  scroll-margin-top: 55px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  #content-section, aside {
+    width: 100%;
+    max-height: none;
+  }
+
+  aside {
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+
+  aside .card {
+    gap: 10px;
+  }
+
+  aside button {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
